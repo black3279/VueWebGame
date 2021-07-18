@@ -20,7 +20,7 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 # VueJsCrashCourse2021
 For study
 
-NOTION URL : https://www.notion.so/Vuex-c8578e7e5cf345f2b42fff3e1c803306
+- NOTION URL : https://polyester-trip-9ae.notion.site/Do-it-Vue-js-64576ef5b1674c3683df2e7ef1efd3f8
 
 ## 1. Watch 속성
 - watch 속성은 감시하는 역할로 데이터가 변경되었을 때, 실행되는 속성이다.

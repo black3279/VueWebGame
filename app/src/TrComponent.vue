@@ -1,6 +1,6 @@
 <template>
   <tr>
-    <td-component v-for="(cellData, index) in rowData" :key="index" :cell-index="index" :row-index="rowIndex"></td-component>
+    <td-component v-for="(cellData, index) in rowData" :key="index" :cell-index="index" :row-index="rowIndex"></td-component> <!-- State 에 저장된 rowData 를 가져와서 사용 -->
   </tr>
 </template>
 

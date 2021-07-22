@@ -29,6 +29,19 @@
       // },
     },
     methods: {
+      onClickTd() {
+        if (this.cellData) return;
+        EventBus.$emit('clickTd', this.rowIndex, this.cellIndex);
+      }
     }
   };
 </script>
+
+<style>
+td {
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+</style>

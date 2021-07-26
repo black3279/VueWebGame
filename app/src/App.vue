@@ -2,9 +2,9 @@
   <div>
     <div>{{turn}}님의 턴입니다.</div>
     <table-component>  <!-- TableComponent 로 맵핑 ( 케밥 표기법으로 사용)-->
-      <tr v-for="(rowData, rowIndex) in tableData" :rowIndex="rowIndex"> <!-- tableData 에서 각 배열을 rowData 로 꺼내고 각 인덱스를 맵핑하여 key 로 보내줌 -> 각 배열은 tr 로 생성 -->
+      <tr-component v-for="(rowData, rowIndex) in tableData" :rowIndex="rowIndex"> <!-- tableData 에서 각 배열을 rowData 로 꺼내고 각 인덱스를 맵핑하여 key 로 보내줌 -> 각 배열은 tr 로 생성 -->
         <td @click="onClickTd(rowIndex, cellIndex)" v-for="(cellData, cellIndex) in rowData" :key="cellIndex">{{cellData}}</td> <!-- 꺼낸 각 배열의 개별 데이터를 cellData 로 꺼냄, 해당 td 클릭 시, row/cell Index 를 전달함 -->
-      </tr>
+      </tr-component>
     </table-component>
     <div v-if="winner">{{winner}}님의 승리!</div>
   </div>
@@ -38,9 +38,9 @@
       //   return this.$store.state.turn;
       // },
     },
-    /*created() {
+    created() {
       EventBus.$on('clickTd', this.onClickTd);
-    },*/
+    },
     methods: {
       onClickTd(rowIndex, cellIndex) { // 개별 td 클릭 시 발생하는 이벤트
         if (this.cellData) return; // 만약 현재 cell 에 세팅된 데이터가 있다면 리턴함
